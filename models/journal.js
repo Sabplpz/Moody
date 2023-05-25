@@ -20,6 +20,13 @@ const Journal = sequelize.define('Journal', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
   },
+  user_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'user',
+      key: 'id',
+    },
+  },
 });
 
 module.exports = Journal;
