@@ -13,13 +13,6 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    for (const mood of moodData) {
-        await Mood.create({
-            ...mood,
-            user_id: users[Math.floor(Math.random() * users.length)].id,
-        });
-    }
-
     process.exit(0)
 };
 
