@@ -1,8 +1,8 @@
-const journal = require('./journal');
+const Journal = require('./Journal');
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-const mood = require('./mood');
+const Mood = require('./Mood');
 
 class User extends Model {
   checkPassword(loginPw) {

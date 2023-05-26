@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { User, journal, mood } = require('../../models');
+const { User, Journal, Mood } = require('../../models');
 
 // get one journal entry
 router.get('/:user_id/:postedOn', (req, res) => {
     // find a single journal entry by its `user_id` and date
     // be sure to include its associated mood data
-    journal.findOne({
+    Journal.findOne({
       where: {
         user_id: req.params.user_id,
         postedOn: req.params.postedOn,
@@ -28,7 +28,7 @@ router.get('/:user_id/:postedOn', (req, res) => {
         "createdAt": 2023-25-05
         }
     */
-    journal.create(req.body)
+    Journal.create(req.body)
       .then((newEntry) => {
           return ProductTag.bulkCreate(newEntry);
       })
@@ -40,7 +40,7 @@ router.get('/:user_id/:postedOn', (req, res) => {
 
   router.put('/:id', (req, res) => {
 
-    journal.update(req.body, {
+    Journal.update(req.body, {
         where: {
             id: req.params.id,
         },

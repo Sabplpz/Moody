@@ -1,6 +1,6 @@
 // Journal.js
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config');
+const sequelize = require('../config/connection');
 
 const Journal = sequelize.define('Journal', {
   id: {
@@ -31,4 +31,4 @@ const Journal = sequelize.define('Journal', {
   modelName: 'journal',
 });
 
-module.exports = journal;
+module.exports = Journal;

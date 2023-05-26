@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const User = require('./User');
 
 
-const Entry = sequelize.define('Entry', {
+const Mood = sequelize.define('Entry', {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -33,4 +33,4 @@ const Entry = sequelize.define('Entry', {
 });
 
 
-module.exports = mood;
+module.exports = Mood;

@@ -1,13 +1,13 @@
-const User = require('./models/user');
-const journal = require('./models/journal');
-const mood = require('./models/mood');
-const sequelize = require('./config/connection');
+const User = require('./User');
+const Journal = require('./journal');
+const Mood = require('./mood');
+const sequelize = require('../config/connection');
 
-User.hasMany(mood, { foreignKey: 'user_id' });
-mood.belongsTo(User, { foreignKey: 'user_id' });
+User.hasMany(Mood, { foreignKey: 'user_id' });
+Mood.belongsTo(User, { foreignKey: 'user_id' });
 
-User.hasMany(journal, { foreignKey: 'user_id' });
-journal.belongsTo(User, { foreignKey: 'user_id' });
+User.hasMany(Journal, { foreignKey: 'user_id' });
+Journal.belongsTo(User, { foreignKey: 'user_id' });
 
 (async () => {
   try {
@@ -21,4 +21,4 @@ journal.belongsTo(User, { foreignKey: 'user_id' });
   }
 })();
 
-module.export = {User, journal, mood};
+module.export = {User, Journal, Mood};
