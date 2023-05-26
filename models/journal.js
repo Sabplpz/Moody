@@ -16,10 +16,7 @@ const Journal = sequelize.define('Journal', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  date: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-  },
+  
   user_id: {
     type: DataTypes.INTEGER,
     references: {
@@ -27,6 +24,11 @@ const Journal = sequelize.define('Journal', {
       key: 'id',
     },
   },
+  sequelize,
+  timestamps: true,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'journal',
 });
 
-module.exports = Journal;
+module.exports = journal;
