@@ -1,5 +1,7 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../config/connection');
+const User = require('./User');
+
 
 const Entry = sequelize.define('Entry', {
   id: {
@@ -7,11 +9,7 @@ const Entry = sequelize.define('Entry', {
     autoIncrement: true,
     primaryKey: true,
   },
-  
-  date: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-  },
+
   mood: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -27,6 +25,12 @@ const Entry = sequelize.define('Entry', {
       key: 'id',
     },
   },
+  sequelize,
+  timestamps: true,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'mood',
 });
 
-module.exports = Entry;
+
+module.exports = mood;
