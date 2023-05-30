@@ -22,10 +22,11 @@ router.get('/:postedOn', (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
       {
-      "title": "example title",
-      "entryText": "Example text",
-      "user_id": 3,
-      "createdAt": 2023-25-05
+        gratitude: "My dog",
+        great_day: "Rockville tickets",
+        affirmation: "affirmation!",
+        highlights: "My iced brown sugar espresso",
+        lesson: "Don't underestimate the neighborhood peacocks"
       }
   */
   Journal.create(req.body)
@@ -39,7 +40,15 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-
+  /* req.body should look like this...
+      {
+        gratitude: "My dog",
+        great_day: "Rockville tickets",
+        affirmation: "affirmation!",
+        highlights: "My iced brown sugar espresso",
+        lesson: "Don't underestimate the neighborhood peacocks"
+      }
+  */
   Journal.update(req.body, {
     where: {
       id: req.params.id,
