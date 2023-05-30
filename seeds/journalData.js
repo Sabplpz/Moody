@@ -3,7 +3,6 @@ const { Journal } = require('../models');
 const journalData =
 [
     {
-        created_at: "05-25-2023",
         gratitude: "My dog",
         great_day: "Rockville tickets",
         affirmation: "affirmation!",
@@ -11,7 +10,6 @@ const journalData =
         lesson: "Don't underestimate the neighborhood peacocks"
     },
     {
-        created_at: "05-24-2023",
         gratitude: "1. Concerts exist 2. So does rock climbing 3. And matcha tea",
         great_day: "1. A Matcha latte 2. An hour to play videogames 3. Rockville tickets",
         affirmation: "I finish what matters and let go of what does not.",
