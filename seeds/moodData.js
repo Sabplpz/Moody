@@ -1,3 +1,6 @@
+const { Mood } = require('../models');
+
+const moodData =
 [
     {
         "date": "2023-05-25",
@@ -11,4 +14,8 @@
         "date": "2023-05-23",
         "mood": "sad"
     }
-]
+];
+
+const seedMoods = () => Mood.bulkCreate(moodData);
+
+module.exports = seedMoods;
