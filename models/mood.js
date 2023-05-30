@@ -12,12 +12,7 @@ Mood.init(
     autoIncrement: true,
     primaryKey: true,
   },
-
   mood: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  entryText: {
     type: DataTypes.STRING,
     allowNull: false,
   },
