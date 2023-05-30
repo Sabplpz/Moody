@@ -1,9 +1,12 @@
-const { DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const User = require('./User');
 
+class Mood extends Model {
+}
 
-const Mood = sequelize.define('Entry', {
+Mood.init(
+  {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -24,12 +27,14 @@ const Mood = sequelize.define('Entry', {
       model: 'user',
       key: 'id',
     },
-  },
-  sequelize,
-  timestamps: true,
-  freezeTableName: true,
-  underscored: true,
-  modelName: 'mood',
+  }
+}, 
+{
+sequelize,
+timestamps: true,
+freezeTableName: true,
+underscored: true,
+modelName: 'journal',
 });
 
 
