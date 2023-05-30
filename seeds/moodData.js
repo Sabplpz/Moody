@@ -3,15 +3,15 @@ const { Mood } = require('../models');
 const moodData =
 [
     {
-        "date": "2023-05-25",
+        "createdAt": "2023-05-25",
         "mood": "stressed"
     },
     {
-        "date": "2023-05-24",
+        "createdAt": "2023-05-24",
         "mood": "neutral"
     },
     {
-        "date": "2023-05-23",
+        "createdAt": "2023-05-23",
         "mood": "sad"
     }
 ];

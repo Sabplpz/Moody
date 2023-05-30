@@ -12,11 +12,19 @@ Journal.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    title: {
+    gratitude: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
-    entryText: {
+    great_day: {
+      type: DataTypes.STRING,
+    },
+    affirmation: {
+      type: DataTypes.STRING,
+    },
+    highlights: {
+      type: DataTypes.STRING,
+    },
+    lesson: {
       type: DataTypes.STRING,
       allowNull: false,
     },
