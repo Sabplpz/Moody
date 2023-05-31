@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
 
 const userData = require('./userData.js');
-const moodData = require('./moodData.json');
+const moodData = require('./moodData.js');
 const journalData = require('./journalData.js');
 
 
