@@ -1,16 +1,17 @@
 const router = require('express').Router();
 const { User, Journal, Mood } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get one journal entry
-router.get('/:postedOn', (req, res) => {
+router.get('/:id', (req, res) => {
   // find a single journal entry by its `user_id` and date
   // be sure to include its associated mood data
+  console.log(req.session);
   Journal.findOne({
     where: {
       user_id: req.session.user_id,
-      postedOn: req.params.postedOn,
+      id: req.params.id,
     },
-    include: [{ model: mood }],
   })
     .then((entry) => res.json(entry))
     .catch((err) => {
@@ -22,11 +23,12 @@ router.get('/:postedOn', (req, res) => {
 router.post('/', (req, res) => {
   /* req.body should look like this...
       {
-        gratitude: "My dog",
-        great_day: "Rockville tickets",
-        affirmation: "affirmation!",
-        highlights: "My iced brown sugar espresso",
-        lesson: "Don't underestimate the neighborhood peacocks"
+        "gratitude": "My dog",
+        "great_day": "Rockville tickets",
+        "affirmation": "affirmation!",
+        "highlights": "My iced brown sugar espresso",
+        "lesson": "Don't underestimate the neighborhood peacocks",
+				"user_id": 1
       }
   */
   Journal.create(req.body)
@@ -42,11 +44,12 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   /* req.body should look like this...
       {
-        gratitude: "My dog",
-        great_day: "Rockville tickets",
-        affirmation: "affirmation!",
-        highlights: "My iced brown sugar espresso",
-        lesson: "Don't underestimate the neighborhood peacocks"
+        "gratitude": "My dog",
+        "great_day": "Rockville tickets",
+        "affirmation": "affirmation!",
+        "highlights": "My iced brown sugar espresso",
+        "lesson": "Don't underestimate the neighborhood peacocks",
+				"user_id": 1
       }
   */
   Journal.update(req.body, {
