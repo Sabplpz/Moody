@@ -1,44 +1,63 @@
-<div>
-    <h2>Moody Entry for {{date}}</h2>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Moody Entry</title>
+  <!-- Include CSS stylesheets here if necessary -->
+  <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Moody Entry for {{date}}</h1>
+    <!-- Add any other header content or navigation here -->
+  </header>
 
-<div>
-    <div>
+  <main>
+    <!-- Add your journal entry content here -->
+    <div class="container">
+      <div class="journal-entry">
         <h3>I am grateful for...</h3>
         <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
-    </div>
-    <div>
+
         <h3>What would make today great?</h3>
         <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
-    </div>
-    <div>
+
         <h3>Daily Affirmation</h3>
         <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
-    </div>
-    <div>
+
         <h3>Highlights of the day</h3>
         <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
-    </div>
-    <div>
+
         <h3>What did I learn today?</h3>
         <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
-    </div>
-</div>
+      </div>
 
-<div>
-    <h3>What's Your Mood Today?:</h3>
-    <ul>
-        <li>Joyful</li>
-        <li>Content</li>
-        <li>Glum</li>
-        <li>Depressed</li>
-        <li>Productive</li>
-        <li>Excited</li>
-        <li>Lazy</li>
-        <li>Tired</li>
-        <li>Fine</li>
-        <li>Anxious</li>
-        <li>Stressed</li>
-        <li>Angry</li>
-    </ul>
-</div>
+      <div class="mood-buttons">
+        <h3>What's Your Mood Today?:</h3>
+        <ul>
+          <li>Joyful</li>
+          <li>Content</li>
+          <li>Glum</li>
+          <li>Depressed</li>
+          <li>Productive</li>
+          <li>Excited</li>
+          <li>Lazy</li>
+          <li>Tired</li>
+          <li>Fine</li>
+          <li>Anxious</li>
+          <li>Stressed</li>
+          <li>Angry</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <!-- Add footer content here -->
+    <p>&copy; 2023 Moody. All rights reserved. Created by Mia Reid, Jesse Elkins, Sabrina Lopez, Adam Brannon, and Kayla Nichols</p>
+  </footer>
+
+ 
+  <script src="../public/js/main.js"></script>
+</body>
+</html>
