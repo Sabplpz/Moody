@@ -3,13 +3,16 @@ const { Mood } = require('../models');
 const moodData =
 [
     {
-        mood: "stressed"
+        mood: "stressed",
+        user_id: 1
     },
     {
-        mood: "neutral"
+        mood: "neutral",
+        user_id: 2
     },
     {
-        mood: "sad"
+        mood: "sad",
+        user_id: 1
     }
 ];
 
