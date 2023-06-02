@@ -1,42 +1,51 @@
+<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moody</title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moody</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
 
-  <body>
-    <div class="flex-column justify-space-around">
-      <header class="display-flex justify-space-between align-center p-2">
-        <h1>
-          <a href="/">Moody</a>
-        </h1>
-        <nav>
-          <!-- Conditionally render login or logout links -->
+<body>
+  <header class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Moody</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
           {{#if logged_in}}
-            <a href="/profile">profile</a>
-            |
-            <button class="no-button" id="logout">logout</button>
+          <li><a href="/profile">Profile</a></li>
+          <li><button class="waves-effect waves-light btn" id="logout">Logout</button></li>
           {{else}}
-            <a href="/login">login</a>
           {{/if}}
-        </nav>
-      </header>
-      <main class="container container-fluid mt-5">
-        <!-- Render the sub layout -->
-        {{{body}}}
-      </main>
-      <footer>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-      </footer>
-    </div>
-
-    <!-- Render script for logged in users only -->
+  <ul class="sidenav" id="mobile-nav">
     {{#if logged_in}}
-      <script src="/js/logout.js"></script>
+    <li><a href="/profile">Profile</a></li>
+    <li><button class="waves-effect waves-light btn" id="logout">Logout</button></li>
+    {{else}}
     {{/if}}
-  </body>
+  </ul>
+
+  <main class="container">
+    {{{body}}}
+  </main>
+
+  <footer class="page-footer">
+    <!-- Your footer content -->
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
 
 </html>

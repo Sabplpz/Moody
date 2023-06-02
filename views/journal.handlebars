@@ -1,33 +1,42 @@
-<div>
-    <h2>Moody Entry for {{date}}</h2>
-</div>
+<header>
+  <nav class="navbar-fixed">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Moody Entry for {{date}}</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <!-- other header content or navigation here -->
+      </ul>
+    </div>
+  </nav>
 
-<div>
-    <div>
-        <form>
-        <h3>I am grateful for...</h3>
+  <ul class="sidenav" id="mobile-nav">
+    <!-- other header content or navigation here -->
+  </ul>
+</header>
 
-        <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
-    </div>
-    <div>
-        <h3>What would make today great?</h3>
-        <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
-    </div>
-    <div>
-        <h3>Daily Affirmation</h3>
-        <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
-    </div>
-    <div>
-        <h3>Highlights of the day</h3>
-        <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
-    </div>
-    <div>
-        <h3>What did I learn today?</h3>
-        <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
+<main>
+  <div class="container">
+    <div class="journal-entry">
+    <form>
+      <h3>I am grateful for...</h3>
+      <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
+
+      <h3>What would make today great?</h3>
+      <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
+
+      <h3>Daily Affirmation</h3>
+      <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
+
+      <h3>Highlights of the day</h3>
+      <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
+
+      <h3>What did I learn today?</h3>
+      <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
     </div>
     <button type="submit">Submit</button>
     </form>
 </div>
+
 
 <div>
     <h3>What's Your Mood Today?:</h3>
@@ -44,3 +53,16 @@
         <input type="image" src="/public/js/assets/tired.png" width="50" height: "50" id="tired-mood" alt="Submit">
     </form>
 </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <!-- footer content here -->
+  <div class="container">
+    <p>&copy; 2023 Moody. All rights reserved. Created by Mia Reid, Jesse Elkins, Sabrina Lopez, Adam Brannon, and Kayla Nichols</p>
+  </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src=""></script>

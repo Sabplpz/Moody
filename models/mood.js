@@ -29,7 +29,7 @@ sequelize,
 timestamps: true,
 freezeTableName: true,
 underscored: true,
-modelName: 'journal',
+modelName: 'mood',
 });
 
 

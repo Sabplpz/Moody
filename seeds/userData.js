@@ -9,8 +9,8 @@ const userData =
     },
     {
         name: "Sabrina",
-        email: "sabrinalpz1994@gmail.com",
-        password: "password1234"
+        email: "sabrina@gmail.com",
+        password: "password"
     },
     {
         name: "Sal",
@@ -19,6 +19,6 @@ const userData =
     },
 ];
 
-const seedUsers = () => User.bulkCreate(userData);
+const seedUsers = () => User.bulkCreate(userData, {individualHooks: true});
 
 module.exports = seedUsers;
