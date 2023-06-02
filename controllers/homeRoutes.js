@@ -2,15 +2,17 @@ const router = require('express').Router();
 const { User, Journal, Mood } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     // Pass serialized data and session flag into template
     if(req.session.logged_in) {
       res.render('homepage', { 
         logged_in: req.session.logged_in 
       });
+    } else {
+      res.redirect('login')
     }
-    res.render('login')
+    
   } catch (err) {
     res.status(500).json(err);
   }
@@ -19,7 +21,7 @@ router.get('/', async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
    else {
@@ -29,11 +31,11 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
    else {
-     res.render('signup');
+     res.render('login');
    }
 })
 
