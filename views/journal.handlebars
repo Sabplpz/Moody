@@ -17,6 +17,7 @@
 <main>
   <div class="container">
     <div class="journal-entry">
+    <form>
       <h3>I am grateful for...</h3>
       <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
 
@@ -32,24 +33,26 @@
       <h3>What did I learn today?</h3>
       <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
     </div>
+    <button type="submit">Submit</button>
+    </form>
+</div>
 
-    <div class="mood-buttons">
-      <h3>What's Your Mood Today?:</h3>
-      <ul class="collection">
-        <li class="collection-item">Joyful</li>
-        <li class="collection-item">Content</li>
-        <li class="collection-item">Glum</li>
-        <li class="collection-item">Depressed</li>
-        <li class="collection-item">Productive</li>
-        <li class="collection-item">Excited</li>
-        <li class="collection-item">Lazy</li>
-        <li class="collection-item">Tired</li>
-        <li class="collection-item">Fine</li>
-        <li class="collection-item">Anxious</li>
-        <li class="collection-item">Stressed</li>
-        <li class="collection-item">Angry</li>
-      </ul>
-    </div>
+
+<div>
+    <h3>What's Your Mood Today?:</h3>
+    <form>
+        <input type="image" src="/public/js/assets/smile.png" width="50" height: "50" id="happy-mood" alt="happy-mood">
+        <input type="image" src="/public/js/assets/neutral.png" width="50" height: "50" id="neutral-mood" alt="neutral-mood">
+        <input type="image" src="/public/js/assets/indecisive.png" width="50" height: "50" id="indecisive-mood" alt="indecisive-mood">
+        <input type="image" src="/public/js/assets/anxious.png" width="50" height: "50" id="anxious-mood" alt="anxious-mood">
+        <input type="image" src="/public/js/assets/sad.png" width="50" height: "50" id="sad-mood" alt="sad-mood">
+        <input type="image" src="/public/js/assets/emotional.png" width="50" height: "50" id="emotional-mood" alt="Submit">
+        <input type="image" src="/public/js/assets/angry.png" width="50" height: "50" id="angry-mood" alt="Submit">
+        <input type="image" src="/public/js/assets/annoyed.png" width="50" height: "50" id="annoyed-mood" alt="Submit">
+        <input type="image" src="/public/js/assets/sick.png" width="50" height: "50" id="sick-mood" alt="Submit">
+        <input type="image" src="/public/js/assets/tired.png" width="50" height: "50" id="tired-mood" alt="Submit">
+    </form>
+</div>
   </div>
 </main>
 
