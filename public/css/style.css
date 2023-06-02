@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: #fff;
+    margin: 0;
 }
 
 .container {
@@ -28,9 +29,26 @@ p {
 
 header {
     text-align: center;
-    margin: 50px auto;
+    margin-bottom: 0; 
     border-bottom: 2px solid white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #222;
 }
+
+header .brand-logo {
+    font-size: 38px;
+    padding: 20px;
+}
+
+header .brand-logo a {
+    text-decoration: none;
+    color: white;
+}
+
 
 header h1 {
     font-size: 38px;
