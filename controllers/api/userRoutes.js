@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.id;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -22,8 +22,6 @@ router.post('/login', async (req, res) => {
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({ where: { email: req.body.email } });
 
-    console.log(userData);
-
     if (!userData) {
       res
         .status(400)
@@ -34,9 +32,6 @@ router.post('/login', async (req, res) => {
     // Verify the posted password with the password store in the database
     const validPassword = userData.checkPassword(req.body.password);
 
-    console.log(req.body.password);
-    console.log(validPassword);
-
     if (!validPassword) {
       res
         .status(400)
@@ -46,7 +41,7 @@ router.post('/login', async (req, res) => {
 
     // Create session variables based on the logged in user
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.id;
       req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
@@ -61,7 +56,7 @@ router.post('/', (req, res) => {
   User.create(req.body)
     .then(userData => {
       req.session.save(() => {
-        req.session.user_id = userData.id;
+        req.session.user_id = userData.dataValues.id;
         req.session.logged_in = true;
 
         res.json(userData);

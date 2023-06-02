@@ -32,9 +32,7 @@ router.post('/', (req, res) => {
       }
   */
   Journal.create(req.body)
-    .then((newEntry) => {
-      return Journal.bulkCreate(newEntry);
-    })
+    .then((newEntry) => {res.status(201).json(newEntry)})
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
