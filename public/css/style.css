@@ -2,84 +2,85 @@
 body, h1, p {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #111;
     color: #fff;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-  
-  p {
+}
+
+p {
     font-size: 16px;
     margin-bottom: 10px;
-  }
+}
 
-  header {
+header {
     text-align: center;
     margin: 50px auto;
     border-bottom: 2px solid white;
-  }
+}
 
-  header h1 {
+header h1 {
     font-size: 38px;
-  }
-  header h1 a {
+}
+
+header h1 a {
     text-decoration: none;
     color: white;
-  }
-  
-  /* Styling for mood journal entries */
-  .journal-entry {
+}
+
+/* Styling for mood journal entries */
+.journal-entry {
     background-color: #222;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-  }
-  
-  .journal-entry h3 {
+}
+
+.journal-entry h3 {
     margin-top: 0;
     font-size: 18px;
     margin-bottom: 10px;
-  }
-  
-  .journal-entry input[type="text"] {
+}
+
+.journal-entry input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
-  }
-  
-  /* Styling for mood buttons */
-  .mood-buttons {
+}
+
+/* Styling for mood buttons */
+.mood-buttons {
     margin-top: 20px;
-  }
-  
-  .mood-buttons h3 {
+}
+
+.mood-buttons h3 {
     margin-bottom: 10px;
-  }
-  
-  .mood-buttons ul {
+}
+
+.mood-buttons ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .mood-buttons li {
+}
+
+.mood-buttons li {
     display: inline-block;
     padding: 10px 20px;
     margin-right: 10px;
@@ -87,41 +88,61 @@ body, h1, p {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .mood-buttons li:hover {
+}
+
+.mood-buttons li:hover {
     background-color: #666;
-  }
-  
-  .signup div, .login div {
+}
+
+.signup div,
+.login div {
     margin: 0 auto;
     text-align: center;
     width: 35vw;
-  }
+}
 
-  .signup div form, .login div form {
+.signup div form,
+.login div form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 35%;
-  }
+}
 
-  .signup div form .form-group, .login div form .form-group {
+.signup div form .form-group,
+.login div form .form-group {
     width: 100%;
     margin: 3px 0;
-  }
+}
 
-  .signup div form .suBtn, .login div form .lBtn {
+.signup div form .suBtn,
+.login div form .lBtn {
     width: 40%;
     margin: 7px auto;
-  }
+}
 
-
-
-  footer {
+footer {
     text-align: center;
     width: 35%;
     margin: 0 auto;
-  }
-  
+}
+
+/* Materialize color palette */
+body {
+    background-color: #C4DFDF;
+    color: #fff;
+}
+
+.journal-entry {
+    background-color: #D2E9E9;
+}
+
+.mood-buttons li {
+    background-color: #E3F4F4;
+}
+
+.container,
+header {
+    border-color: #F8F6F4;
+}

@@ -1,53 +1,65 @@
-
-  <header>
-    <h1>Moody Entry for {{date}}</h1>
-    <!-- Add any other header content or navigation here -->
-  </header>
-
-  <main>
-    <!-- Add your journal entry content here -->
-    <div class="container">
-      <div class="journal-entry">
-        <h3>I am grateful for...</h3>
-        <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
-
-        <h3>What would make today great?</h3>
-        <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
-
-        <h3>Daily Affirmation</h3>
-        <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
-
-        <h3>Highlights of the day</h3>
-        <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
-
-        <h3>What did I learn today?</h3>
-        <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
-      </div>
-
-      <div class="mood-buttons">
-        <h3>What's Your Mood Today?:</h3>
-        <ul>
-          <li>Joyful</li>
-          <li>Content</li>
-          <li>Glum</li>
-          <li>Depressed</li>
-          <li>Productive</li>
-          <li>Excited</li>
-          <li>Lazy</li>
-          <li>Tired</li>
-          <li>Fine</li>
-          <li>Anxious</li>
-          <li>Stressed</li>
-          <li>Angry</li>
-        </ul>
-      </div>
+<header>
+  <nav class="navbar-fixed">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Moody Entry for {{date}}</a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <!-- other header content or navigation here -->
+      </ul>
     </div>
-  </main>
+  </nav>
 
-  <footer>
-    <!-- Add footer content here -->
+  <ul class="sidenav" id="mobile-nav">
+    <!-- other header content or navigation here -->
+  </ul>
+</header>
+
+<main>
+  <div class="container">
+    <div class="journal-entry">
+      <h3>I am grateful for...</h3>
+      <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
+
+      <h3>What would make today great?</h3>
+      <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
+
+      <h3>Daily Affirmation</h3>
+      <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
+
+      <h3>Highlights of the day</h3>
+      <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
+
+      <h3>What did I learn today?</h3>
+      <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
+    </div>
+
+    <div class="mood-buttons">
+      <h3>What's Your Mood Today?:</h3>
+      <ul class="collection">
+        <li class="collection-item">Joyful</li>
+        <li class="collection-item">Content</li>
+        <li class="collection-item">Glum</li>
+        <li class="collection-item">Depressed</li>
+        <li class="collection-item">Productive</li>
+        <li class="collection-item">Excited</li>
+        <li class="collection-item">Lazy</li>
+        <li class="collection-item">Tired</li>
+        <li class="collection-item">Fine</li>
+        <li class="collection-item">Anxious</li>
+        <li class="collection-item">Stressed</li>
+        <li class="collection-item">Angry</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="page-footer">
+  <!-- footer content here -->
+  <div class="container">
     <p>&copy; 2023 Moody. All rights reserved. Created by Mia Reid, Jesse Elkins, Sabrina Lopez, Adam Brannon, and Kayla Nichols</p>
-  </footer>
+  </div>
+</footer>
 
- 
-  <script src="/js/main.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src=""></script>
