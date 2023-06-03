@@ -1,68 +1,54 @@
-<header>
-  <nav class="navbar-fixed">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Moody Entry for {{date}}</a>
-      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <!-- other header content or navigation here -->
-      </ul>
-    </div>
-  </nav>
-
-  <ul class="sidenav" id="mobile-nav">
-    <!-- other header content or navigation here -->
-  </ul>
-</header>
-
-<main>
-  <div class="container">
-    <div class="journal-entry">
-    <form class="journal-form">
-      <h3>I am grateful for...</h3>
-      <input type="text" id="gratitude-user-entry" name="gratitude-user-entry" />
-
-      <h3>What would make today great?</h3>
-      <input type="text" id="great-day-user-entry" name="great-day-user-entry" />
-
-      <h3>Daily Affirmation</h3>
-      <input type="text" id="affirmation-user-entry" name="affirmation-user-entry" />
-
-      <h3>Highlights of the day</h3>
-      <input type="text" id="highlights-user-entry" name="highlights-user-entry" />
-
-      <h3>What did I learn today?</h3>
-      <input type="text" id="lessons-today-user-entry" name="lessons-today-user-entry" />
-    </div>
-    <button type="submit">Submit</button>
+<div class="container">
+<h2>New Journal Entry</h2>
+</div>
+<div class="row">
+<div class="col s9">
+  <div class="row">
+    <form class="col s12 journal-form">
+      <div class="row">
+        <div class="col s12">
+          <label for="textarea1">I am grateful for...</label>
+          <textarea id="textarea1 gratitude-user-entry" class="materialize-textarea"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">What would make today great?</label>
+          <textarea id="textarea1 great-day-user-entry" class="materialize-textarea"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">Daily affirmation</label>
+          <textarea id="textarea1 affirmation-user-entry" class="materialize-textarea"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">Highlights of the day</label>
+          <textarea id="textarea1 highlights-user-entry" class="materialize-textarea"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">What did I learn today?</label>
+          <textarea id="textarea1 lessons-today-user-entry" class="materialize-textarea"></textarea>
+        </div>
+      </div>
+      <button type="submit">Post</button>
     </form>
+  </div>
 </div>
 
-
-<div>
-    <h3>What's Your Mood Today?:</h3>
-    <form>
-        <input type="image" src="/public/js/assets/smile.png" width="50" height: "50" id="happy-mood" alt="happy-mood">
-        <input type="image" src="/public/js/assets/neutral.png" width="50" height: "50" id="neutral-mood" alt="neutral-mood">
-        <input type="image" src="/public/js/assets/indecisive.png" width="50" height: "50" id="indecisive-mood" alt="indecisive-mood">
-        <input type="image" src="/public/js/assets/anxious.png" width="50" height: "50" id="anxious-mood" alt="anxious-mood">
-        <input type="image" src="/public/js/assets/sad.png" width="50" height: "50" id="sad-mood" alt="sad-mood">
-        <input type="image" src="/public/js/assets/emotional.png" width="50" height: "50" id="emotional-mood" alt="Submit">
-        <input type="image" src="/public/js/assets/angry.png" width="50" height: "50" id="angry-mood" alt="Submit">
-        <input type="image" src="/public/js/assets/annoyed.png" width="50" height: "50" id="annoyed-mood" alt="Submit">
-        <input type="image" src="/public/js/assets/sick.png" width="50" height: "50" id="sick-mood" alt="Submit">
-        <input type="image" src="/public/js/assets/tired.png" width="50" height: "50" id="tired-mood" alt="Submit">
+{{!-- <div class="col s3">
+<h3>What's Your Mood Today?:</h3>
+<form>
+        <input type="image" src="/js/assets/smile.png" width="50" style="padding: 10px" id="happy-mood" alt="happy-mood">
+        <input type="image" src="/js/assets/neutral.png" width="50" style="padding: 10px" id="neutral-mood" alt="neutral-mood">
+        <input type="image" src="/js/assets/indecisive.png" width="50" style="padding: 10px" id="indecisive-mood" alt="indecisive-mood">
+        <input type="image" src="/js/assets/anxious.png" width="50" style="padding: 10px" id="anxious-mood" alt="anxious-mood">
+        <input type="image" src="/js/assets/sad.png" width="50" style="padding: 10px" id="sad-mood" alt="sad-mood">
+        <input type="image" src="/js/assets/emotional.png" width="50" style="padding: 10px" id="emotional-mood" alt="Submit">
+        <input type="image" src="/js/assets/angry.png" width="50" style="padding: 10px" id="angry-mood" alt="Submit">
+        <input type="image" src="/js/assets/annoyed.png" width="50" style="padding: 10px" id="annoyed-mood" alt="Submit">
+        <input type="image" src="/js/assets/sick.png" width="50" style="padding: 10px" id="sick-mood" alt="Submit">
+        <input type="image" src="/js/assets/tired.png" width="50" style="padding: 10px" id="tired-mood" alt="Submit">
     </form>
 </div>
-  </div>
-</main>
-
-<footer class="page-footer">
-  <!-- footer content here -->
-  <div class="container">
-    <p>&copy; 2023 Moody. All rights reserved. Created by Mia Reid, Jesse Elkins, Sabrina Lopez, Adam Brannon, and Kayla Nichols</p>
-  </div>
-</footer>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="/js/mood.js"></script>
+<div class="col s3">
+  <button type="submit">Post</button>
+</div> --}}
+</div>
+<script src="/js/journal.js"></script>
