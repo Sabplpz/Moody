@@ -22,7 +22,14 @@ Mood.init(
       model: 'user',
       key: 'id',
     },
-  }
+  },
+  journal_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'journal',
+      key: 'id',
+    },
+  },
 }, 
 {
 sequelize,
