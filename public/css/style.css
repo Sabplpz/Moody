@@ -1,60 +1,44 @@
 /* Reset default styles for some elements */
-body, h1, p {
-    margin: 0;
-    padding: 0;
+nav {
+    background-color: #C4DFDF;
+    font-family: 'Oswald', sans-serif;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    color: #000;
     margin: 0;
+    background-color: #F8F6F4;
 }
-
 h1 {
     font-size: 56px;
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 42px;
     color: #C4DFDF;
     text-align: center;
 }
-
 h3 {
     font-size: 24px;
 }
-
 p, label {
     font-size: 24px;
     margin-bottom: 10px;
 }
-
-header {
-    text-align: center;
-    margin-bottom: 0; 
-    border-bottom: 2px solid white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #222;
+nav .brand-logo {
+    font-size: 36px;
+    padding-left: 20px;
 }
-
 nav .brand-logo a {
     text-decoration: none;
     color: white;
 }
-
 .signup div,
 .login div {
     margin: 0 auto;
     text-align: center;
     width: 35vw;
 }
-
 .signup div form,
 .login div form {
     margin: 0 auto;
@@ -63,37 +47,27 @@ nav .brand-logo a {
     justify-content: center;
     width: 35%;
 }
-
 .signup div form .form-group,
 .login div form .form-group {
     width: 100%;
     margin: 3px 0;
 }
-
 .signup div form .suBtn,
 .login div form .lBtn {
     width: 40%;
     margin: 7px auto;
 }
-
 /* label focus color */
 .input-field input[type=text]:focus + label {
     color: #000;
   }
-
 /* label underline focus color */
 .input-field input[type=text]:focus {
     border-bottom: 1px solid #E3F4F4;
     box-shadow: 0 1px 0 0 #000;
   }
-
 footer {
     text-align: center;
     width: 35%;
     margin: 0 auto;
-}
-
-.container,
-header {
-    border-color: #F8F6F4;
 }
