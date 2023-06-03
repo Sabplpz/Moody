@@ -1,17 +1,18 @@
-<div class="container">
-  <h2>Dashboard</h2>
-    <!-- homepage content here -->
-  </div>
+<div class="previous-journal">
 
+  <h3>Previous Entries</h3>
+  <div id="list-prevjournals"></div>
 
-<footer class="page-footer">
-  <!-- footer content here -->
-  <div class="container">
-    <p>&copy; 2023 Moody. All rights reserved.</p>
-    <p>Created by Mia Reid, Jesse Elkins, Sabrina Lopez, Adam Brannon, and Kayla Nichols</p>
-  </div>
-</footer>
+</div>
+<div class="dashboard">
 
-<!-- JavaScript files here -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src=""></script>
+  <h2>Welcome, {{name}}!</h2>
+
+  <div class="insp-quote"></div>
+
+  <a href="/newjournal"><button>New Entry</button></a>
+
+</div>
+
+<script src="../public/js/quote.js"></script>
+<script src="../public/js/journal.js"></script>
