@@ -1,4 +1,4 @@
-const journalFormHandler = async (event) => {
+async function journalFormHandler(event) {
     event.preventDefault();
 
     const gratitudeEntry = document.querySelector("#gratitude-user-entry").value.trim();
@@ -7,15 +7,17 @@ const journalFormHandler = async (event) => {
     const highlightsEntry = document.querySelector("#highlights-user-entry").value.trim();
     const lessonEntry = document.querySelector("#lessons-today-user-entry").value.trim();
 
-    if (gratitudeEntry || greatDayEntry || affirmationEntry || highlightsEntry || lessonEntry) {
-
-        const response = await fetch('/api/journal', {
+    const response = await fetch(`/api/journal`, {
             method: 'POST',
             body: JSON.stringify({gratitudeEntry, greatDayEntry, affirmationEntry, highlightsEntry, lessonEntry}),
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' }
         });
+
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } 
     }
-};
+
 
 function getPastEntries(){
     fetch('/api/journal', {
