@@ -7,45 +7,31 @@
   <title>Moody</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo">Moody</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          {{#if logged_in}}
-          <li><a href="/profile">Profile</a></li>
-          <li><button class="waves-effect waves-light btn" id="logout">Logout</button></li>
-          {{else}}
-          {{/if}}
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <ul class="sidenav" id="mobile-nav">
-    {{#if logged_in}}
-    <li><a href="/profile">Profile</a></li>
-    <li><button class="waves-effect waves-light btn" id="logout">Logout</button></li>
-    {{else}}
-    {{/if}}
-  </ul>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Moody</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{#if logged_in}}
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/">Logout</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
 
   <main class="container">
     {{{body}}}
   </main>
-
-  <footer class="page-footer">
-    <!-- Your footer content -->
-  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
-
 </html>
