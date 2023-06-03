@@ -2,11 +2,10 @@ const router = require('express').Router();
 const { User, Journal, Mood } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//get last 10 entries by the user
+//get last entries by the user
 router.get('/', (req, res) => {
   // find journal entries by its `user_id`
   // be sure to include its associated mood data
-  console.log(req.session);
   Journal.findAll({
     where: {
       user_id: req.session.user_id,
