@@ -11,17 +11,8 @@ body {
     margin: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 0;
-}
-
 h1 {
-    font-size: 100rem;
+    font-size: 56px;
     margin-bottom: 20px;
 }
 
@@ -52,12 +43,7 @@ header {
     background-color: #222;
 }
 
-header .brand-logo {
-    font-size: 38px;
-    padding: 20px;
-}
-
-header .brand-logo a {
+nav .brand-logo a {
     text-decoration: none;
     color: white;
 }
