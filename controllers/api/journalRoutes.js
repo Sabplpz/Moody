@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    include: [{model: Mood}]
+    include: [{ model: Mood }]
   })
     .then((entries) => res.json(entries))
     .catch((err) => {
@@ -23,7 +23,6 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single journal entry by its `user_id` and date
   // be sure to include its associated mood data
-  console.log(req.session);
   Journal.findOne({
     where: {
       user_id: req.session.user_id,
@@ -45,14 +44,14 @@ router.post('/', (req, res) => {
         "affirmation": "affirmation!",
         "highlights": "My iced brown sugar espresso",
         "lesson": "Don't underestimate the neighborhood peacocks",
-				"user_id": 1
+        "user_id": 1
       }
   */
   Journal.create({
     ...req.body,
     user_id: req.session.user_id
   })
-    .then((newEntry) => {res.status(201).json(newEntry)})
+    .then((newEntry) => { res.status(201).json(newEntry) })
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
@@ -67,10 +66,13 @@ router.put('/:id', (req, res) => {
         "affirmation": "affirmation!",
         "highlights": "My iced brown sugar espresso",
         "lesson": "Don't underestimate the neighborhood peacocks",
-				"user_id": 1
+        "user_id": 1
       }
   */
-  Journal.update(req.body, {
+  Journal.update({
+    ...req.body,
+    user_id: req.session.user_id
+  }, {
     where: {
       id: req.params.id,
     },

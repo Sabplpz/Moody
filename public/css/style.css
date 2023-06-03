@@ -9,6 +9,10 @@ body {
     margin: 0;
     background-color: #F8F6F4;
 }
+.date-container{
+    display: flex;
+    justify-content: right;
+}
 h1 {
     font-size: 56px;
     margin-bottom: 20px;
