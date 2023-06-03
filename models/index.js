@@ -9,4 +9,7 @@ Mood.belongsTo(User, { foreignKey: 'user_id' });
 User.hasMany(Journal, { foreignKey: 'user_id' });
 Journal.belongsTo(User, { foreignKey: 'user_id' });
 
+Journal.hasOne(Mood, { foreignKey: 'journal_id' });
+Mood.hasOne(Journal, { foreignKey: 'id' })
+
 module.exports = {User, Journal, Mood};

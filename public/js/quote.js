@@ -1,4 +1,3 @@
-// Fetch a random quote from the API
 fetch('https://type.fit/api/quotes',)
   .then(response => response.json())
   .then(data => {
@@ -21,3 +20,4 @@ fetch('https://type.fit/api/quotes',)
     console.log(`"${quote}" - ${author}`); // Output the quote and author
   })
   .catch(error => console.error(error));
+

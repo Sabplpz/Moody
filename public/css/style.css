@@ -11,7 +11,9 @@ body {
     margin: 0;
 }
 
-.container {
+main {
+    display: flex;
+    flex-direction: row;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -19,7 +21,7 @@ body {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 100rem;
     margin-bottom: 20px;
 }
 
@@ -58,6 +60,14 @@ header h1 {
 header h1 a {
     text-decoration: none;
     color: white;
+}
+
+.previous-journal {
+    padding: 5%;
+}
+
+.dashboard {
+    padding: 3%;
 }
 
 /* Styling for mood journal entries */

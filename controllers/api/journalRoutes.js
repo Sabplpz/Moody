@@ -2,6 +2,24 @@ const router = require('express').Router();
 const { User, Journal, Mood } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//get last 10 entries by the user
+router.get('/', (req, res) => {
+  // find journal entries by its `user_id`
+  // be sure to include its associated mood data
+  console.log(req.session);
+  Journal.findAll({
+    where: {
+      user_id: req.session.user_id,
+    },
+    include: [{model: Mood}]
+  })
+    .then((entries) => res.json(entries))
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    })
+});
+
 // get one journal entry
 router.get('/:id', (req, res) => {
   // find a single journal entry by its `user_id` and date
@@ -31,7 +49,10 @@ router.post('/', (req, res) => {
 				"user_id": 1
       }
   */
-  Journal.create(req.body)
+  Journal.create({
+    ...req.body,
+    user_id: req.session.user_id
+  })
     .then((newEntry) => {res.status(201).json(newEntry)})
     .catch((err) => {
       console.log(err);
