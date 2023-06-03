@@ -12,25 +12,23 @@ body {
     background-color: #F8F6F4;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 0;
-}
-
 h1 {
-    font-size: 42px;
+    font-size: 56px;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 42px;
     color: #C4DFDF;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
 }
 
 p, label {
-    font-size: 16px;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
@@ -42,60 +40,6 @@ nav .brand-logo {
 nav .brand-logo a {
     text-decoration: none;
     color: white;
-}
-
-
-/* Styling for mood journal entries */
-.journal-entry {
-    background-color: #222;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-.journal-entry h3 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.journal-entry input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* Styling for mood buttons */
-.mood-buttons {
-    margin-top: 20px;
-}
-
-.mood-buttons h3 {
-    margin-bottom: 10px;
-}
-
-.mood-buttons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.mood-buttons li {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.mood-buttons li:hover {
-    background-color: #666;
 }
 
 .signup div,
@@ -126,19 +70,20 @@ nav .brand-logo a {
     margin: 7px auto;
 }
 
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #000;
+  }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #E3F4F4;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
 footer {
     text-align: center;
     width: 35%;
     margin: 0 auto;
-}
-
-/* Materialize color palette */
-
-.journal-entry {
-    background-color: #D2E9E9;
-}
-
-.mood-buttons li {
-    background-color: #E3F4F4;
 }
 
