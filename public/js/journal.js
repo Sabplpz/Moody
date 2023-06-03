@@ -9,7 +9,7 @@ const journalFormHandler = async (event) => {
 
     if (gratitudeEntry || greatDayEntry || affirmationEntry || highlightsEntry || lessonEntry) {
 
-        const response = await fetch('api/journal', {
+        const response = await fetch('/api/journal', {
             method: 'POST',
             body: JSON.stringify({gratitudeEntry, greatDayEntry, affirmationEntry, highlightsEntry, lessonEntry}),
             headers: { 'Content-Type': 'application/json' },
