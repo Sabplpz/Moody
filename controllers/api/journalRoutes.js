@@ -31,7 +31,11 @@ router.post('/', (req, res) => {
 				"user_id": 1
       }
   */
-  Journal.create(req.body)
+
+  Journal.create({
+    ...req.body, 
+    user_id: req.session.user_id
+  })
     .then((newEntry) => {res.status(201).json(newEntry)})
     .catch((err) => {
       console.log(err);
