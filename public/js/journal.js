@@ -1,20 +1,20 @@
 async function journalFormHandler(event) {
     event.preventDefault();
 
-    const gratitudeEntry = document.querySelector("#gratitude-user-entry").value.trim();
-    const greatDayEntry = document.querySelector("#great-day-user-entry").value.trim();
-    const affirmationEntry = document.querySelector("#affirmation-user-entry").value.trim();
-    const highlightsEntry = document.querySelector("#highlights-user-entry").value.trim();
-    const lessonEntry = document.querySelector("#lessons-today-user-entry").value.trim();
+    const gratitude = document.querySelector(".gratitude-user-entry").value.trim();
+    const great_day = document.querySelector(".great-day-user-entry").value.trim();
+    const affirmation = document.querySelector(".affirmation-user-entry").value.trim();
+    const highlights = document.querySelector(".highlights-user-entry").value.trim();
+    const lesson = document.querySelector(".lessons-today-user-entry").value.trim();
 
-    const response = await fetch(`/api/journal`, {
+    const response = fetch(`/api/journal`, {
             method: 'POST',
-            body: JSON.stringify({gratitudeEntry, greatDayEntry, affirmationEntry, highlightsEntry, lessonEntry}),
+            body: JSON.stringify({gratitude, great_day, affirmation, highlights, lesson}),
             headers: { 'Content-Type': 'application/json' }
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/homepage');
         } 
     }
 
