@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Journal, Mood } = require('../../models');
+const { User, Journal } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //get last entries by the user
@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    include: [{ model: Mood }]
   })
     .then((entries) => res.json(entries))
     .catch((err) => {
@@ -44,6 +43,7 @@ router.post('/', (req, res) => {
         "affirmation": "affirmation!",
         "highlights": "My iced brown sugar espresso",
         "lesson": "Don't underestimate the neighborhood peacocks",
+        "mood": "annoyed",
         "user_id": 1
       }
   */
@@ -66,6 +66,7 @@ router.put('/:id', (req, res) => {
         "affirmation": "affirmation!",
         "highlights": "My iced brown sugar espresso",
         "lesson": "Don't underestimate the neighborhood peacocks",
+        "mood": "annoyed",
         "user_id": 1
       }
   */
