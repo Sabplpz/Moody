@@ -46,26 +46,18 @@ router.get('/newjournal', withAuth, async (req, res) => {
 
 router.get('/prevjournal/:id', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-
     const journalData = await Journal.findOne({
       where: {
         user_id: req.session.user_id,
         id: req.params.id,
-      }
+      },
+      include: [{model: User, attributes: { exclude: ['password'] }}]
     });
 
-    // const journal = journalData.get({ plain: true }); 
-
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] }
-    });
-
-    const user = userData.get({ plain: true });
+    const journal = journalData.get({ plain: true });
 
     res.render('prevJournal', {
-      ...journalData,
-      ...user,
+      ...journal,
       logged_in: req.session.logged_in
     });
   } catch (err) {
