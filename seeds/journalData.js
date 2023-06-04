@@ -8,6 +8,7 @@ const journalData =
         affirmation: "affirmation!",
         highlights: "My iced brown sugar espresso",
         lesson: "Don't underestimate the neighborhood peacocks",
+        mood: "sad",
         user_id: 2
     },
     {
@@ -16,6 +17,7 @@ const journalData =
         affirmation: "I finish what matters and let go of what does not.",
         highlights: "1. Cool evening weather walking my dog 2. No meetings 3. New Ted Lasso episode",
         lesson: "Patience is key",
+        mood: "happy",
         user_id: 1
     },
     {
@@ -24,6 +26,7 @@ const journalData =
         affirmation: "I finish what matters and let go of what does not.",
         highlights: "1. Cool evening weather walking my dog 2. No meetings 3. New Ted Lasso episode",
         lesson: "Patience is annoying, but necessary",
+        mood: "annoyed",
         user_id: 3
     }
 ];

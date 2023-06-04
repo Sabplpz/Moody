@@ -26,7 +26,9 @@ Journal.init(
     },
     lesson: {
       type: DataTypes.STRING,
-      allowNull: false,
+    },
+    mood: {
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
