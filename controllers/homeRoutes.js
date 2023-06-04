@@ -44,9 +44,19 @@ router.get('/newjournal', withAuth, async (req, res) => {
   }
 });
 
-router.get('/prevjournal', withAuth, async (req, res) => {
+router.get('/prevjournal/:id', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
+
+    const journalData = await Journal.findOne({
+      where: {
+        user_id: req.session.user_id,
+        id: req.params.id,
+      }
+    });
+
+    const journal = journalData.get({ plain: true }); 
+
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] }
     });
@@ -54,6 +64,7 @@ router.get('/prevjournal', withAuth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render('prevJournal', {
+      ...journal,
       ...user,
       logged_in: req.session.logged_in
     });
