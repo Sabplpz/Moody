@@ -1,7 +1,6 @@
 let listPrevEl = document.querySelector('.list-prevjournals');
 let listEl = document.createElement('ul');
 
-
 const getPastEntries = async (event) => {
 
     const response = await fetch(`/api/journal/`, {
