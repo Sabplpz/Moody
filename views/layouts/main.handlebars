@@ -8,24 +8,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+  {{!-- DayJS Links --}}
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav>
+  <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Moody</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {{#if logged_in}}
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/">Logout</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li id="logout"><a href="/">Logout</a></li>
         {{/if}}
       </ul>
     </div>
   </nav>
 
   <main class="container">
+    <div class="date-container"><p class="date"></p></div>
     {{{body}}}
   </main>
 
@@ -34,4 +38,7 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
+
+<script src="/js/day.js"></script>
+
 </html>

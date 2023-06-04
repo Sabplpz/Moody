@@ -15,10 +15,11 @@ async function journalFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
 
-        if (response.ok) {
-            document.location.replace('/homepage');
+        if (response === 201) {
+            document.location.replace('/');
         } 
     }
+
 
 // function getPastEntries(){
 //     fetch('/api/journal', {
@@ -55,11 +56,15 @@ async function journalFormHandler(event) {
 
 // };
 
+
 document
-  .querySelector('.journal-form')
-  .addEventListener('submit', journalFormHandler);
+  .querySelector('#journal-form')
+  .addEventListener("submit", journalFormHandler);
+
+
 
 // document
 //   .querySelector('#list-prevjournals')
 //   .addEventListener('onload', getPastEntries);
+
 
