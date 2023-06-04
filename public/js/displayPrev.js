@@ -1,5 +1,9 @@
-let listPrevEl = document.querySelector('.list-prevjournals');
-let listEl = document.createElement('ul');
+let gratitudeEl = document.querySelector('.gratitude');
+let great_dayEl = document.querySelector('.great_day');
+let affirmationEl = document.querySelector('.affirmation');
+let highlightsEl = document.querySelector('.highlights');
+let lessonEl = document.querySelector('.lesson');
+let moodEl = document.querySelector('.mood');
 
 const getPastEntries = async (event) => {
 
@@ -36,15 +40,11 @@ const getPastEntries = async (event) => {
 function displayPastEntries(createdAt, id) {
 
     let itemEl = document.createElement('il');
-    let linkEl = document.createElement('a');
     let buttonEl = document.createElement('button');
     let idEl = document.createElement('p');
 
     buttonEl.textContent = createdAt;
-    linkEl.appendChild(buttonEl);
-    linkEl.setAttribute('href', `/prevjournal/${id}`);
-
-    itemEl.appendChild(linkEl);
+    itemEl.appendChild(buttonEl);
 
     idEl.textContent = id;
     idEl.style.display ='none';
