@@ -10,16 +10,15 @@ async function journalFormHandler(event) {
     const mood = document.querySelector(".mood").value;
 
     const response = fetch(`/api/journal`, {
-            method: 'POST',
-            body: JSON.stringify({gratitude, great_day, affirmation, highlights, lesson, mood}),
-            headers: { 'Content-Type': 'application/json' }
-        });
+        method: 'POST',
+        body: JSON.stringify({ gratitude, great_day, affirmation, highlights, lesson, mood }),
+        headers: { 'Content-Type': 'application/json' }
+    });
 
-        if (response === 201) {
-            document.location.replace('/');
-        } 
-    }
+    document.location.replace('/');
+
+}
 
 document
-  .querySelector('#journal-form')
-  .addEventListener("submit", journalFormHandler);
+    .querySelector('#journal-form')
+    .addEventListener("submit", journalFormHandler);
