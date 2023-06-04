@@ -7,29 +7,29 @@
   <div class="row">
         <div class="col s12 gratitude">
             <h3>I am grateful for...</h3>
-            <p>{{gratitude}}</p>
+            <p class="journal-entry">{{gratitude}}</p>
         </div>
         <div class="col s12 great_day">
             <h3>What would make today great?</h3>
-            <p>{{great_day}}</p>
+            <p class="journal-entry">{{great_day}}</p>
         </div>
         <div class="col s12 affirmation">
             <h3>Daily affirmation</h3>
-            <p>{{affirmation}}</p>
+            <p class="journal-entry">{{affirmation}}</p>
         </div>
         <div class="col s12 highlights">
             <h3>Highlights of the day</h3>
-            <p>{{highlights}}</p>
+            <p class="journal-entry">{{highlights}}</p>
         </div>
         <div class="col s12 lesson">
             <h3>What did I learn today?</h3>
-            <p>{{lesson}}</p>
+            <p class="journal-entry">{{lesson}}</p>
         </div>
     </div>
   </div>
 <div class="col s4 mood">
-  <h3>What's Your Mood Today?:</h3>
-  <img style="width: 100px; height: 100px;" src="../public/assets/{{mood}}.png" />
+  <h3>Your Mood On {{createdAt}}:</h3>
+  <img style="width: 100px; height: 100px;" src="/assets/{{mood}}.png" />
   <br /><br />
   <button class="btn" href="/">Edit</button>
 </div>

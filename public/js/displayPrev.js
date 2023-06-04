@@ -44,6 +44,7 @@ function displayPastEntries(createdAt, id) {
     let idEl = document.createElement('p');
 
     buttonEl.textContent = createdAt;
+
     itemEl.appendChild(buttonEl);
 
     idEl.textContent = id;
@@ -52,7 +53,6 @@ function displayPastEntries(createdAt, id) {
     itemEl.appendChild(idEl);
 
     listEl.appendChild(itemEl);
-
     listPrevEl.appendChild(listEl);
 };
 

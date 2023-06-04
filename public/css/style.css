@@ -275,8 +275,29 @@ input#tired-mood[type=radio]:checked + label {
     border-style: solid;
 }
 
+button {
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    background-color: #C4DFDF;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.journal-entry {
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight:lighter;
+}
+
 .row .col {
     padding: 0 2rem;
+}
+
+.prevBtns {
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
