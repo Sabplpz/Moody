@@ -13,11 +13,10 @@ fetch('https://type.fit/api/quotes',)
     for (var i = 0; i < 1; i++) {
       var randomIndex = Math.floor(Math.random() * data.length);
       var randomQuote = data[randomIndex];
+      // Output the quote and author
       randomElement.textContent = `${randomQuote.text} - ${randomQuote.author}`;
-      console.log(`${randomQuote.text} - ${randomQuote.author}`);
     }
-
-    console.log(`"${quote}" - ${author}`); // Output the quote and author
+    
   })
   .catch(error => console.error(error));
 
