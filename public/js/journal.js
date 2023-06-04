@@ -7,7 +7,7 @@ async function journalFormHandler(event) {
     const highlights = document.querySelector(".highlights-user-entry").value.trim();
     const lesson = document.querySelector(".lessons-today-user-entry").value.trim();
 
-    const mood = document.querySelector(".mood").value;
+    const mood = document.querySelector('input[class="mood"]:checked').value;
 
     const response = fetch(`/api/journal`, {
         method: 'POST',
