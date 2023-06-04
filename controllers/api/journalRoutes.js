@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
+    order: [['createdAt', 'DESC']]
   })
     .then((entries) => res.json(entries))
     .catch((err) => {

@@ -1,37 +1,57 @@
-async function getPastEntries(){
-    fetch('/api/journal/', {
-        method: 'GET',
+let listPrevEl = document.querySelector('.list-prevjournals');
+let listEl = document.createElement('ul');
+
+
+const getPastEntries = async (event) => {
+
+    const response = await fetch(`/api/journal/`, {
+        method: 'GET'
     })
-    .then(function (response) {
-          console.log(response);
-        //   response.json().then(function (data) {
-        //     console.log(data);
-        //     // Code to clear all the html from the element
-        //     futureWeatherEl.innerHTML = '';
-        //     // Fetching the value from the data five times for the next 5 days
-        //     for (var i = 1; i < 10; i++){
-        //         var temperature = data.list[i].main.temp;
-        //         var wind = data.list[i].wind.speed;
-        //         var humidity = data.list[i].main.humidity;
-        //         var iconCode = data.list[i].weather[0].icon;
-        //         var icon = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png';
-        //         // Calling the function that will get the weather data to display on the site
-        //         displayPastEntries(temperature, wind, humidity, icon, i);
-        //     }
-        //   });
-        // } else {
-        //   alert('Error: ' + response.statusText);
-        // }
-      })
-      .catch(function (error) {
-        alert('Unable to connect to Backend');
-      });
+        .then(function (res) {
+            if (res.ok) {
+                res.json().then(function (data) {
+                    // Code to clear all the html from the element
+                    listPrevEl.innerHTML = '';
+
+                     // Fetching the value from the data ten times for the last 10 entries
+                    for (var i = 0; i < 10; i++) {
+                        let id = data[i].id;
+                        let createdAtData = data[i].createdAt;
+                        let result = createdAtData.split('T');
+                        let createdAt = result[0];
+                        console.log(createdAt, id);
+
+                        // Calling the function that will get the data to displayed on the site
+                        displayPastEntries(createdAt, id);
+                    }
+                })
+            } else {
+                alert('Error: ' + res.statusText);
+            }
+        })
+        .catch (function (error) {
+    alert('Unable to connect to Backend');
+});
 };
 
-function displayPastEntries(){
+function displayPastEntries(createdAt, id) {
 
+    let itemEl = document.createElement('il');
+    let buttonEl = document.createElement('button');
+    let idEl = document.createElement('p');
+
+    buttonEl.textContent = createdAt;
+    itemEl.appendChild(buttonEl);
+
+    idEl.textContent = id;
+    idEl.style.display ='none';
+    idEl.setAttribute('id', 'journal-id');
+    itemEl.appendChild(idEl);
+
+    listEl.appendChild(itemEl);
+
+    listPrevEl.appendChild(listEl);
 };
 
-document
-  .querySelector('.list-prevjournals')
-  .addEventListener("DOMContentLoaded", getPastEntries);
+
+getPastEntries();
