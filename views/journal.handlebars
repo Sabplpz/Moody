@@ -1,8 +1,8 @@
 <div class="container">
 <h2>New Journal Entry</h2>
 </div>
-<div class="row">
-<div class="col s9">
+<div class="row mobile">
+<div class="col s12 m8 19">
   <div class="row">
     <form class="col s12" id="journal-form">
       <div class="row">
@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<div class="col s3">
+<div class="col s12 m4 13">
 <h3>What's Your Mood Today?:</h3>
         <input type="radio" value="happy" name="happy-mood" class="mood" id="happy-mood" alt="happy-mood">
         <label for="happy-mood"></label>
@@ -52,7 +52,8 @@
         <label for="sick-mood"></label>
         <input type="radio" value="tired"name="tired-mood" class="mood" id="tired-mood" alt="tired-mood">
         <label for="tired-mood"></label>
-        <button type="submit">Post</button>
+        <br /><br />
+        <button class="btn" type="submit">Post</button>
     </form>
 </div>
 <script src="/js/journal.js"></script>
