@@ -56,5 +56,3 @@ function displayPastEntries(createdAt, id) {
     listPrevEl.appendChild(listEl);
 };
 
-
-getPastEntries();
