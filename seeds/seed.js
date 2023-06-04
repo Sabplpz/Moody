@@ -15,8 +15,8 @@ const seedDatabase = async () => {
     await journalData();
     console.log('\n------ JOURNALS SEEDED ------\n');
 
-    await moodData();
-    console.log('\n------ MOODS SEEDED ------\n');
+    // await moodData();
+    // console.log('\n------ MOODS SEEDED ------\n');
 
     process.exit(0)
 };

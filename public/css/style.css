@@ -81,6 +81,212 @@ nav .brand-logo a {
     box-shadow: 0 1px 0 0 #000;
   }
 
+input[type=radio] {
+    display: none;
+}
+
+input#happy-mood[type=radio] + label {
+    background-image: url("../assets/smile.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#happy-mood[type=radio]:checked + label {
+    background-image:url("../assets/smile.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#neutral-mood[type=radio] + label {
+    background-image:url("../assets/neutral.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#neutral-mood[type=radio]:checked + label {
+    background-image:url("../assets/neutral.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#indecisive-mood[type=radio] + label {
+    background-image:url("../assets/indecisive.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#indecisive-mood[type=radio]:checked + label {
+    background-image:url("../assets/indecisive.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#anxious-mood[type=radio] + label {
+    background-image:url("../assets/anxious.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#anxious-mood[type=radio]:checked + label {
+    background-image:url("../assets/anxious.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#sad-mood[type=radio] + label {
+    background-image:url("../assets/sad.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#sad-mood[type=radio]:checked + label {
+    background-image:url("../assets/sad.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#emotional-mood[type=radio] + label {
+    background-image:url("../assets/crying.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#emotional-mood[type=radio]:checked + label {
+    background-image:url("../assets/crying.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#angry-mood[type=radio] + label {
+    background-image:url("../assets/angry.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#angry-mood[type=radio]:checked + label {
+    background-image:url("../assets/angry.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#annoyed-mood[type=radio] + label {
+    background-image:url("../assets/annoyed.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#annoyed-mood[type=radio]:checked + label {
+    background-image:url("../assets/annoyed.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#sick-mood[type=radio] + label {
+    background-image:url("../assets/sick.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#sick-mood[type=radio]:checked + label {
+    background-image:url("../assets/sick.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+input#tired-mood[type=radio] + label {
+    background-image:url("../assets/tired.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+}
+
+input#tired-mood[type=radio]:checked + label {
+    background-image:url("../assets/tired.png");
+    background-size: contain;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0 0 0 0px;
+    border-color: #E3F4F4;
+    border-style: solid;
+}
+
+
+
 footer {
     text-align: center;
     width: 35%;
