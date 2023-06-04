@@ -275,6 +275,13 @@ input#tired-mood[type=radio]:checked + label {
     border-style: solid;
 }
 
+@media screen and (max-width: 600px) {
+    .mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
 footer {
     text-align: center;
     width: 35%;
