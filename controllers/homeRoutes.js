@@ -55,8 +55,31 @@ router.get('/prevjournal/:id', withAuth, async (req, res) => {
     });
 
     const journal = journalData.get({ plain: true });
+    
 
     res.render('prevJournal', {
+      ...journal,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/prevjournal/edit/:id', withAuth, async (req, res) => {
+  try {
+    const journalData = await Journal.findOne({
+      where: {
+        user_id: req.session.user_id,
+        id: req.params.id,
+      },
+      include: [{model: User, attributes: { exclude: ['password'] }}]
+    });
+
+    const journal = journalData.get({ plain: true });
+    console.log(journal)
+
+    res.render('editJournal', {
       ...journal,
       logged_in: req.session.logged_in
     });
