@@ -1,29 +1,33 @@
 <div class="container">
 <h2>New Journal Entry</h2>
 </div>
-<div class="row">
-<div class="col s8">
-  <form id="journal-form">
-    <div>
-    <label for="textarea1">I am grateful for...</label>
-    <textarea id="textarea1" class="materialize-textarea gratitude-user-entry"></textarea>
-    </div>
-    <div>
-    <label for="textarea1">What would make today great?</label>
-    <textarea id="textarea1" class="materialize-textarea great-day-user-entry"></textarea>
-    </div>
-    <div>
-    <label for="textarea1">Daily affirmation</label>
-    <textarea id="textarea1" class="materialize-textarea affirmation-user-entry"></textarea>
-    </div> 
-    <div>
-    <label for="textarea1">Highlights of the day</label>
-    <textarea id="textarea1" class="materialize-textarea highlights-user-entry"></textarea>
-    </div>
-    <div>
-    <label for="textarea1">What did I learn today?</label>
-    <textarea id="textarea1" class="materialize-textarea lessons-today-user-entry"></textarea>
-    </div>
+
+<div class="row mobile">
+<div class="col s12 m8 19">
+  <div class="row">
+    <form class="col s12" id="journal-form">
+      <div class="row">
+        <div class="col s12">
+          <label for="textarea1">I am grateful for...</label>
+          <textarea id="textarea1" class="materialize-textarea gratitude-user-entry"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">What would make today great?</label>
+          <textarea id="textarea1 great-day-user-entry" class="materialize-textarea great-day-user-entry"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">Daily affirmation</label>
+          <textarea id="textarea1 affirmation-user-entry" class="materialize-textarea affirmation-user-entry"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">Highlights of the day</label>
+          <textarea id="textarea1 highlights-user-entry" class="materialize-textarea highlights-user-entry"></textarea>
+        </div>
+        <div class="col s12">
+          <label for="textarea1">What did I learn today?</label>
+          <textarea id="textarea1 lessons-today-user-entry" class="materialize-textarea lessons-today-user-entry"></textarea>
+        </div>
+      </div>
   </div>
 <div class="col s4 mood-box">
   <h3>What's Your Mood Today?:</h3>
@@ -54,11 +58,30 @@
     <input type="radio" value="sick"name="sick-mood" class="mood" id="sick-mood" alt="sick-mood">
     <label for="sick-mood"></label>
 
-    <input type="radio" value="tired"name="tired-mood" class="mood" id="tired-mood" alt="tired-mood">
-    <label for="tired-mood"></label>
-    
-    <br /> <br />
-    <button class="waves-effect waves-light btn" type="submit">Post</button>
+<div class="col s12 m4 13">
+<h3>What's Your Mood Today?:</h3>
+        <input type="radio" value="happy" name="happy-mood" class="mood" id="happy-mood" alt="happy-mood">
+        <label for="happy-mood"></label>
+        <input type="radio" value="neutral" name="neutral-mood" class="mood" id="neutral-mood" alt="neutral-mood">
+        <label for="neutral-mood"></label>
+        <input type="radio" value="indecisive" name="indecisive-mood" class="mood" id="indecisive-mood" alt="indecisive-mood">
+        <label for="indecisive-mood"></label>
+        <input type="radio" value="anxious" name="anxious-mood" class="mood" id="anxious-mood" alt="anxious-mood">
+        <label for="anxious-mood"></label>
+        <input type="radio" value="sad" name="sad-mood" class="mood" id="sad-mood" alt="sad-mood">
+        <label for="sad-mood"></label>
+        <input type="radio" value="emotional" name="emotional-mood" class="mood" id="emotional-mood" alt="emotional-mood">
+        <label for="emotional-mood"></label>
+        <input type="radio" value="angry" name="angry-mood" class="mood" id="angry-mood" alt="angry-mood">
+        <label for="angry-mood"></label>
+        <input type="radio" value="annoyed"name="annoyed-mood" class="mood" id="annoyed-mood" alt="annoyed-mood">
+        <label for="annoyed-mood"></label>
+        <input type="radio" value="sick"name="sick-mood" class="mood" id="sick-mood" alt="sick-mood">
+        <label for="sick-mood"></label>
+        <input type="radio" value="tired"name="tired-mood" class="mood" id="tired-mood" alt="tired-mood">
+        <label for="tired-mood"></label>
+        <br /><br />
+        <button class="btn" type="submit">Post</button>
     </form>
 </div>
 <script src="/js/journal.js"></script>

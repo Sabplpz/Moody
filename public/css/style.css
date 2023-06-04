@@ -275,10 +275,14 @@ input#tired-mood[type=radio]:checked + label {
     border-style: solid;
 }
 
+.row .col {
+    padding: 0 2rem;
+}
+
 @media screen and (max-width: 600px) {
     .mobile {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
