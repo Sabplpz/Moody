@@ -76,7 +76,7 @@ input[type=radio] {
 }
 
 input#happy-mood[type=radio] + label {
-    background-image: url("../assets/smile.png");
+    background-image: url("../assets/happy.png");
     background-size: contain;
     display: inline-block;
     width: 50px;
@@ -85,7 +85,7 @@ input#happy-mood[type=radio] + label {
 }
 
 input#happy-mood[type=radio]:checked + label {
-    background-image:url("../assets/smile.png");
+    background-image:url("../assets/happy.png");
     background-size: contain;
     display: inline-block;
     width: 50px;
@@ -176,7 +176,7 @@ input#sad-mood[type=radio]:checked + label {
 }
 
 input#emotional-mood[type=radio] + label {
-    background-image:url("../assets/crying.png");
+    background-image:url("../assets/emotional.png");
     background-size: contain;
     display: inline-block;
     width: 50px;
@@ -185,7 +185,7 @@ input#emotional-mood[type=radio] + label {
 }
 
 input#emotional-mood[type=radio]:checked + label {
-    background-image:url("../assets/crying.png");
+    background-image:url("../assets/emotional.png");
     background-size: contain;
     display: inline-block;
     width: 50px;
