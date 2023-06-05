@@ -75,6 +75,15 @@ input[type=radio] {
     display: none;
 }
 
+.moodBtn:hover {
+  cursor: pointer;
+  transition: .25s;
+  transform: scale(1.075);
+}
+.moodBtn:not(:hover) {
+  transition: .25s;
+}
+
 input#happy-mood[type=radio] + label {
     background-image: url("../assets/happy.png");
     background-size: contain;
