@@ -92,6 +92,17 @@ input[type=radio] {
   transition: .25s;
 }
 
+/* Align moods to the right */
+.mood-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.moodBtn {
+    margin-left: 10px;
+}
+
+
 input#happy-mood[type=radio] + label {
     background-image: url("../assets/happy.png");
     background-size: contain;
