@@ -6,6 +6,7 @@
 
 <div class="row mobile">
     <div class="col s12 m8 19">
+        <div class="row">
         <form class="col s12" id="journal-form">
             <div class="row">
                 <div class="col s12 gratitude">
@@ -33,7 +34,9 @@
                         class="materialize-textarea lessons-today-user-entry">{{lesson}}</textarea>
                 </div>
             </div>
-            <div class="col s4 mood">
+        </div>
+        </div>
+            <div class="col s12 m4 13">
                 <h3>Your Mood on {{createdAt}}:</h3>
                 <input type="radio" value="happy" name="happy-mood" class="mood" id="happy-mood" alt="happy-mood">
                 <label class="moodBtn" for="happy-mood"></label>
@@ -62,7 +65,7 @@
                 <label class="moodBtn" for="tired-mood"></label>
                 <br /><br />
                 <br /><br />
-                <button class="btn" href="/" type="submit">Post</button>
+                <button class="btn" href="/" type="submit">Update</button>
             </div>
         </form>
     </div>
