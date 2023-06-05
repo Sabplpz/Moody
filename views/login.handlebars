@@ -1,4 +1,4 @@
-<div class="row">
+{{! <div class="row">
   <div class="col-md-6">
     <h2>Login</h2>
 
@@ -41,4 +41,102 @@
 
   <!-- Include JavaScript files here -->
   <script src="/js/login.js"></script>
+ }}
+
+{{! New Login Page  }}
+
+<div class="row responsive-img" id="top-login">
+	<div class="col l6 pull-l1">
+		<img
+			id="login-pic"
+			class="responsive-img z-depth-4"
+			src="/assets/peace2.jpg"
+			alt=""
+		/>
+	</div>
+	<div class="col l6">
+		<p id="open-statement">In the hustle and bustle of our daily lives, it's
+			easy to overlook the importance of self-reflection and gratitude. That's
+			why we created Moody, a unique online platform designed to make journaling
+			quick, convenient, and transformative. Moody is not your typical
+			journaling app. We understand that your time is valuable, so we've crafted
+			an experience that allows you to capture your thoughts, emotions, and
+			reflections in just five minutes a day. Whether you're a seasoned
+			journaler or new to the practice, Moody is here to guide you on a journey
+			of self-discovery and personal growth.</p>
+      {{!-- Modal Trigger Login --}}
+        <button data-target="modal2" class="btn modal-trigger">Login</button>
+        <!-- Modal Trigger Register -->
+				<button data-target="modal1" class="btn modal-trigger">Register</button>
+	</div>
+</div>
+
+{{!-- Modal Structure For Login --}}
+<div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4 >Login</h4>
+      
+<div class="col l4">
+		
+
+		<form class="form login-form">
+			<div class="form-group">
+				<label for="email-login">Email:</label>
+				<input class="form-input" type="text" id="email-login" />
+			</div>
+			<div class="form-group">
+				<label for="password-login">Password:</label>
+				<input class="form-input" type="password" id="password-login" />
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Login</button>
+				
+			</div>
+		</form>
+	</div>
+
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+    </div>
+  </div>
+
+<!-- Modal Structure For Registering-->
+<div id="modal1" class="modal">
+	<div class="modal-content">
+		<h4>Register</h4>
+		<div class="col l4">
+
+			<form class="form signup-form">
+				<div class="form-group">
+					<label for="name-signup">Name:</label>
+					<input class="form-input" type="text" id="name-signup" />
+				</div>
+				<div class="form-group">
+					<label for="email-signup">Email:</label>
+					<input class="form-input" type="text" id="email-signup" />
+				</div>
+				<div class="form-group">
+					<label for="password-signup">Password:</label>
+					<input class="form-input" type="password" id="password-signup" />
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary" type="submit">Signup</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-close waves-effect waves-green btn-flat">Back</a>
+	</div>
+</div>
+
+<!-- Include JavaScript files here -->
+<script src="/js/login.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+></script>
+<script src="/js/materialize.js"></script>
+
 
