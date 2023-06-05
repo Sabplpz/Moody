@@ -11,8 +11,10 @@ body {
 }
 .date-container{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+
 }
+
 h1 {
     font-size: 56px;
     margin-bottom: 20px;
@@ -89,6 +91,17 @@ input[type=radio] {
 .moodBtn:not(:hover) {
   transition: .25s;
 }
+
+/* Align moods to the right */
+.mood-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.moodBtn {
+    margin-left: 10px;
+}
+
 
 input#happy-mood[type=radio] + label {
     background-image: url("../assets/happy.png");
