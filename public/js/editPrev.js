@@ -2,9 +2,7 @@ async function journalFormHandler(event) {
     event.preventDefault();
 
     const id = document.querySelector('.journal-id').textContent;
-    console.log(id);
     const route = `/api/journal/${id}`;
-    console.log(route);
 
     const gratitude = document.querySelector(".gratitude-user-entry").value.trim();
     const great_day = document.querySelector(".great-day-user-entry").value.trim();
@@ -13,6 +11,8 @@ async function journalFormHandler(event) {
     const lesson = document.querySelector(".lessons-today-user-entry").value.trim();
 
     const mood = document.querySelector('input[class="mood"]:checked').value;
+
+    console.log(gratitude, great_day, affirmation, highlights, lesson, mood);
 
     const response = fetch(route, {
         method: 'PUT',
