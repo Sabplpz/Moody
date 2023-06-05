@@ -1,7 +1,8 @@
 async function journalFormHandler(event) {
     event.preventDefault();
 
-    const id = document.querySelector('.journal-id').value;
+    const id = document.querySelector('.journal-id').textContent;
+    console.log(id);
     const route = `/api/journal/${id}`;
     console.log(route);
 
@@ -19,7 +20,7 @@ async function journalFormHandler(event) {
         headers: { 'Content-Type': 'application/json' }
     });
 
-    // document.location.replace(`/prevjournal/${id}`);
+    document.location.replace(`/prevjournal/${id}`);
 
 }
 

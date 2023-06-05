@@ -77,7 +77,6 @@ router.get('/prevjournal/edit/:id', withAuth, async (req, res) => {
     });
 
     const journal = journalData.get({ plain: true });
-    console.log(journal)
 
     res.render('editJournal', {
       ...journal,
