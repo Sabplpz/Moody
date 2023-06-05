@@ -11,14 +11,20 @@ const getPastEntries = async (event) => {
                 res.json().then(function (data) {
                     // Code to clear all the html from the element
                     listPrevEl.innerHTML = '';
+                    let length;
 
-                     // Fetching the value from the data ten times for the last 10 entries
-                    for (var i = 0; i < 10; i++) {
+                    if (data.length < 10) {
+                        length = data.length;
+                    } else {
+                        length = 10;
+                    };
+
+                    // Fetching the value from the data ten times for the last 10 entries
+                    for (var i = 0; i < length; i++) {
                         let id = data[i].id;
                         let createdAtData = data[i].createdAt;
                         let result = createdAtData.split('T');
                         let createdAt = result[0];
-                        console.log(createdAt, id);
 
                         // Calling the function that will get the data to displayed on the site
                         displayPastEntries(createdAt, id);
@@ -28,9 +34,9 @@ const getPastEntries = async (event) => {
                 alert('Error: ' + res.statusText);
             }
         })
-        .catch (function (error) {
-    alert('Unable to connect to Backend');
-});
+        .catch(function (error) {
+            alert('Unable to connect to Backend');
+        });
 };
 
 function displayPastEntries(createdAt, id) {
@@ -47,7 +53,7 @@ function displayPastEntries(createdAt, id) {
     itemEl.appendChild(linkEl);
 
     idEl.textContent = id;
-    idEl.style.display ='none';
+    idEl.style.display = 'none';
     idEl.setAttribute('id', 'journal-id');
     itemEl.appendChild(idEl);
 
