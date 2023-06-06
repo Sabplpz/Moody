@@ -16,9 +16,22 @@
 </head>
 
 <body>
-  <nav>
+  {{!-- <nav>
+    <div class="nav-wrapper">
+      <div><a href="#" class="brand-logo">Moody</a></div>
+      <ul>
+        {{#if logged_in}}
+        <li><a href="/">Dashboard</a></li>
+        <li id="logout"><a href="/">Logout</a></li>
+        {{/if}}
+      </ul>
+    </div>
+    </div>
+  </nav> --}}
+    <nav class="nav-extended">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Moody</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         {{#if logged_in}}
         <li><a href="/">Dashboard</a></li>
@@ -26,7 +39,14 @@
         {{/if}}
       </ul>
     </div>
-  </nav>
+    </nav>
+
+     <ul class="sidenav" id="mobile-demo">
+      {{#if logged_in}}
+    <li><a href="/">Dashboard</a></li>
+    <li id="logout"><a href="/">Logout</a></li>
+    {{/if}}
+  </ul>
 
   <main class="container">
     {{#if logged_in}}
@@ -40,5 +60,11 @@
   <script src="/js/logout.js"></script>
   <script src="/js/day.js"></script>
   {{/if}}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+  </script>
 </body>
 </html>
