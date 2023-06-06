@@ -2,6 +2,8 @@
 <h2>Previous Journal Entry</h2>
 </div>
 
+<h1 class="journal-id" style="display: none">{{id}}</h1>
+
 <div class="row mobile">
 <div class="col s12 m8 19">
   <div class="row">
@@ -28,8 +30,10 @@
     </div>
   </div>
 <div class="col s4 mood">
-  <h3>Your Mood On {{createdAt}}:</h3>
+  <h3 class="text"></h3>
   <img style="width: 100px; height: 100px;" src="/assets/{{mood}}.png" />
   <br /><br />
   <a href="/prevjournal/edit/{{id}}"><button class="btn">Edit</button></a>
 </div>
+
+<script src="/js/prevDate.js"></script>
