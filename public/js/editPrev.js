@@ -14,7 +14,7 @@ async function journalFormHandler(event) {
 
     console.log(gratitude, great_day, affirmation, highlights, lesson, mood);
 
-    const response = fetch(route, {
+    const response = await fetch(route, {
         method: 'PUT',
         body: JSON.stringify({ gratitude, great_day, affirmation, highlights, lesson, mood }),
         headers: { 'Content-Type': 'application/json' }
