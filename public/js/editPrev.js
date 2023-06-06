@@ -12,8 +12,6 @@ async function journalFormHandler(event) {
 
     const mood = document.querySelector('input[class="mood"]:checked').value;
 
-    console.log(gratitude, great_day, affirmation, highlights, lesson, mood);
-
     const response = await fetch(route, {
         method: 'PUT',
         body: JSON.stringify({ gratitude, great_day, affirmation, highlights, lesson, mood }),
